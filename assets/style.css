@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+	margin: 0 7%;
+}
+
+.header	{
+	text-align: center;
+	margin: 30px auto;
+}
+
+.header h1 {
+	font-size: 3em;
+	margin: 20px auto;
+}
+
+.header h2 {
+	font-size: 1.5em;
+	margin: 10px;
+}
+
+#location {
+	font-size: 2em;
+	margin: 10px auto;
+	padding: 10px;
+}
+
+#forecast {
+	text-align: center;
+	position: relative;
+	min-height: 60vh;
+}
+
+#forecast h1 {
+	font-size: 20em;
+	margin-bottom: 20px;
+}
+
+.loader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url('../assets/images/eclipse.gif') no-repeat 50%;
+	background-size: 100px;
+}
+
+.rain {
+	display: flex;
+	justify-content: center;
+}
+
+.rain > div {
+	margin:	10px 40px;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+@media only screen and (max-width: 767px) {
+    .container {
+        margin: 0;
+    }
+
+    .rain {
+    	display: block;
+    }
+
+    .header h1 {
+    	font-size: 2em;
+    }
+
+    .header h2 {
+    	font-size: 1em;
+    }
+
+    #location {
+    	font-size: 1.5em;
+    }
+
+    .rain > div {
+    	margin: 40px auto;
+    }
+
+    #forecast h1 {
+    	font-size: 12em;
+    }
+}
