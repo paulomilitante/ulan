@@ -35,7 +35,7 @@
 
 		<div id="forecast"></div>
 	</div>
-	<p class="disclaimer">Forecast data belongs to <a href="http://www.weather-manila.com" target="_blank">Weather Manila</a>. For more information and in-depth weather forecast, please visit their website.</p>
+	<p class="disclaimer">UULAN BA? does not assume any liability for the accuracy, completeness, or usefulness of any information disclosed herein.<br>Forecast data belongs to <a href="http://www.weather-manila.com" target="_blank">Weather Manila</a>. For more information and in-depth weather forecast, please visit their website.</p>
 
 	<script src="assets/script.js"></script>
 </body>
