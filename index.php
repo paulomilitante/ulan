@@ -21,19 +21,21 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>Uulan ba sa</h1>
-			<select id="location">
+			<h1 id="date"></h1>
+			<h2>Uulan ba sa 
+				<select id="location">
 				<?php
 					foreach ($locations as $key => $value) {
 						echo $value == $_COOKIE['location'] ? "<option selected value='$value'>$key</option>" : "<option value='$value'>$key</option>";
 					 } 
 				?>
-			</select>
-			<h2 id="date"></h2>
+				</select>
+			</h2>
 		</div>
 
 		<div id="forecast"></div>
 	</div>
+	<p class="disclaimer">Forecast data belongs to <a href="www.weather-manila.com" target="_blank">Weather Manila</a>. For more information and in-depth weather forecast, please visit their website.</p>
 
 	<script src="assets/script.js"></script>
 </body>

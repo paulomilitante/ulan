@@ -57,7 +57,8 @@
 			$rains[$i] = $periods[$i]; 
 	}
 
-	echo !$rains ? "<h1>Hindi</h1>" : "<h1>Oo</h1>";
+	echo !$rains ? "<h1>Hindi.</h1>" : "<h1>Oo.</h1>";
+	echo !$rains ? "<p class='comment'>Pero magdala ka pa rin ng payong kung ayaw mong mangitim.</p>" : "<p class='comment'>Magdala ka ng payong o kapote kung ayaw mong mabasa.</p>";
 
 	echo "<div class='rain'>";
 	foreach ($rains as $key => $rain) {
