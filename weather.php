@@ -3,9 +3,25 @@
 
 	$location = $_GET['location'];
 
-	if (!isset($_COOKIE[$location]))
-		setcookie('location', $location, time() + (86400 * 15), "/");
+	date_default_timezone_set("Asia/Manila");
+	$currenttime = date("H");
 
+	if ($currenttime < "3")
+		$currentperiod = 1;
+	elseif ($currenttime >= "3" && $currenttime < "6")
+		$currentperiod = 2;
+	elseif ($currenttime >= "6" && $currenttime < "9")
+		$currentperiod = 3;
+	elseif ($currenttime >= "9" && $currenttime < "12")
+		$currentperiod = 4;
+	elseif ($currenttime >= "12" && $currenttime < "15")
+		$currentperiod = 5;
+	elseif ($currenttime >= "15" && $currenttime < "18")
+		$currentperiod = 6;
+	elseif ($currenttime >= "18" && $currenttime < "21")
+		$currentperiod = 7;
+	elseif ($currenttime >= "21" && $currenttime < "24")
+		$currentperiod = 8;
 
 	$time = ["12:00mn - 03:00am",
 			"03:00am - 06:00am", 
@@ -36,7 +52,7 @@
 		$periods [] = $small->innertext;
 	}
 
-	for ($i=1; $i < 9; $i++) { 
+	for ($i = $currentperiod; $i < 9; $i++) { 
 		if ($periods[$i] != 0)
 			$rains[$i] = $periods[$i]; 
 	}
