@@ -9,6 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 
+	<link rel="shortcut icon" type="image/png" href="assets/images/moderate.png"/>
+
 	<title>UULAN BA?</title>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
