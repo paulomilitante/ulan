@@ -1,6 +1,11 @@
 var weatherSearch = function() {
 	var location = $("#location").val();
 
+	$.get('setlocation.php',
+		{'location' : location},
+		function(data) {
+		});
+
 	$.get('weather.php',
 		{'location' : location},
 		function(data) {

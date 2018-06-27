@@ -7,37 +7,38 @@
 
 .container {
 	margin: 0 7%;
+	min-height: 100vh;
+	padding-top: 30px;
 }
 
 .header	{
 	text-align: center;
-	margin: 30px auto;
 }
 
 .header h1 {
-	font-size: 3em;
-	margin: 20px auto;
+	font-size: 3vw;
+	margin: 10px auto;
 }
 
 .header h2 {
-	font-size: 1.5em;
+	font-size: 1.5vw;
 	margin: 10px;
 }
 
 #location {
-	font-size: 2em;
-	margin: 10px auto;
-	padding: 10px;
+	font-size: 2vw;
+	padding: 5px;
 }
 
 #forecast {
 	text-align: center;
 	position: relative;
 	min-height: 60vh;
+	margin-top: 50px;
 }
 
 #forecast h1 {
-	font-size: 20em;
+	font-size: 15vw;
 	margin-bottom: 20px;
 }
 
@@ -75,7 +76,7 @@ img {
     }
 
     .header h1 {
-    	font-size: 2em;
+    	font-size: 8vw;
     }
 
     .header h2 {
@@ -83,7 +84,7 @@ img {
     }
 
     #location {
-    	font-size: 1.5em;
+    	font-size: 5vw;
     }
 
     .rain > div {
@@ -91,6 +92,6 @@ img {
     }
 
     #forecast h1 {
-    	font-size: 12em;
+    	font-size: 40vw;
     }
 }

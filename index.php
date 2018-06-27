@@ -1,3 +1,7 @@
+<?php 
+	include 'locations.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,16 +19,13 @@
 <body>
 	<div class="container">
 		<div class="header">
-			<h1>UULAN BA SA</h1>
+			<h1>Uulan ba sa</h1>
 			<select id="location">
-				<option value="001">Quezon City</option>
-				<option value="003">Manila</option>
-				<option value="005">Mandaluyong</option>
-				<option value="006">Pasig</option>
-				<option value="007">Makati</option>
-				<option value="008">Pasay</option>
-				<option value="012">Marikina</option>
-				<option value="014">Paranaque</option>
+				<?php
+					foreach ($locations as $key => $value) {
+						echo $value == $_COOKIE['location'] ? "<option selected value='$value'>$key</option>" : "<option value='$value'>$key</option>";
+					 } 
+				?>
 			</select>
 			<h2 id="date"></h2>
 		</div>

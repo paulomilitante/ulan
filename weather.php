@@ -3,6 +3,10 @@
 
 	$location = $_GET['location'];
 
+	if (!isset($_COOKIE[$location]))
+		setcookie('location', $location, time() + (86400 * 15), "/");
+
+
 	$time = ["12:00mn - 03:00am",
 			"03:00am - 06:00am", 
 			"06:00am - 09:00am", 
