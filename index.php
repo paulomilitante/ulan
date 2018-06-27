@@ -26,7 +26,10 @@
 				<select id="location">
 				<?php
 					foreach ($locations as $key => $value) {
-						echo $value == $_COOKIE['location'] ? "<option selected value='$value'>$key</option>" : "<option value='$value'>$key</option>";
+						if(isset($_COOKIE['location']))
+							echo $value == $_COOKIE['location'] ? "<option selected value='$value'>$key</option>" : "<option value='$value'>$key</option>";
+						else
+							echo $value == "003" ? "<option selected value='$value'>$key</option>" : "<option value='$value'>$key</option>";
 					 } 
 				?>
 				</select>
