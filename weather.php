@@ -1,5 +1,6 @@
 <?php 
 	include 'simple_html_dom.php';
+	include 'lines.php';
 
 	$location = $_GET['location'];
 
@@ -57,8 +58,10 @@
 			$rains[$i] = $periods[$i]; 
 	}
 
+	$random = rand(0,1);
+
 	echo !$rains ? "<h1>Hindi.</h1>" : "<h1>Oo.</h1>";
-	echo !$rains ? "<p class='comment'>Pero magdala ka pa rin ng payong kung ayaw mong mangitim.</p>" : "<p class='comment'>Magdala ka ng payong o kapote kung ayaw mong mabasa.</p>";
+	echo !$rains ? "<p class='comment'>$hindi[$random]</p>" : "<p class='comment'>$oo[$random]</p>";
 
 	echo "<div class='rain'>";
 	foreach ($rains as $key => $rain) {
