@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="google-site-verification" content="s2EWm8gTtEA-VPf8R6OO0NOTsl1WC6YF8MR7ZiJL95U" />
-	<meta property="og:url"                content="http://www.uulanba.ml />
+	<meta property="og:url"                content="http://www.uulanba.ml" />
 	<meta property="og:type"               content="website" />
 	<meta property="og:title"              content="UULAN BA?" />
 	<meta property="og:description"        content="Alamin kung uulan ba."/>
