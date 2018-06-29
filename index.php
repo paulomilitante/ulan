@@ -12,7 +12,7 @@
 	<meta property="og:url"                content="http://www.uulanba.ml" />
 	<meta property="og:type"               content="website" />
 	<meta property="og:title"              content="UULAN BA?" />
-	<meta property="og:description"        content="Alamin kung uulan ba."/>
+	<meta property="og:description"        content="Alamin kung uulan ba sa mga lungsod sa Pilipinas."/>
 	<meta property="og:image"              content="http://www.uulanba.ml/assets/images/moderate.png" />
 
 	<link rel="shortcut icon" type="image/png" href="assets/images/moderate.png"/>
