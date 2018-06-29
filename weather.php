@@ -45,17 +45,29 @@
 	$html = file_get_html($websiteUrl);
 
 	$table = $html->find('table',0);
-	$tr = $table->find('tr',4);
+	$tr = $table->find('tr', 4);
+	$tr2 = $table->find('tr', 1);
 	$periods = array();
+	$periods2 = array();
 	$rains = array();
+	$rains2 = array();
 
 	foreach ($tr->find('small') as $small) {
 		$periods [] = $small->innertext;
 	}
 
-	for ($i = $currentperiod; $i < 9; $i++) { 
+	foreach ($tr2->find('img') as $img) {
+		$periods2 [] = $img->attr['src'];
+	}
+
+	for ($i = $currentperiod; $i < 9; $i++) {
+		
+		$h = $i - 1;
+
 		if ($periods[$i] != 0)
-			$rains[$i] = $periods[$i]; 
+			$rains[$i] = $periods[$i];
+		elseif ($periods2[$h] == "forecasts/fcimage/fc3hr/rainy1.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/rainy3.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/cloud5.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/cloud6.jpg")
+			$rains[$i] = $periods2[$h];
 	}
 
 	$random = rand(0,1);
@@ -67,23 +79,28 @@
 	foreach ($rains as $key => $rain) {
 		$x = $key - 1;
 		echo "<div>";
-		if ($rain <= "1") {
+
+		if ($rain == "forecasts/fcimage/fc3hr/rainy1.jpg" || $rain == "forecasts/fcimage/fc3hr/rainy3.jpg" || $rain == "forecasts/fcimage/fc3hr/cloud5.jpg" || $rain == "forecasts/fcimage/fc3hr/cloud6.jpg" ||) {
+			echo "<img src='assets/images/very_light.png'><br>";
+			echo "<h5>$rainrate[0]</h5>";
+		}
+		elseif ($rain <= "1") {
 			echo "<img src='assets/images/light.png'><br>";
 			echo "<h5>$rainrate[1]</h5>";
 		}
-		if ($rain > "1" && $rain <= "4") {
+		elseif ($rain > "1" && $rain <= "4") {
 			echo "<img src='assets/images/moderate.png'><br>";
 			echo "<h5>$rainrate[2]</h5>";
 		}
-		if ($rain > "4" && $rain <= "16") {
+		elseif ($rain > "4" && $rain <= "16") {
 			echo "<img src='assets/images/heavy.png'><br>";
 			echo "<h5>$rainrate[3]</h5>";
 		}
-		if ($rain > "16" && $rain <= "50") {
+		elseif ($rain > "16" && $rain <= "50") {
 			echo "<img src='assets/images/very_heavy.png'><br>";
 			echo "<h5>$rainrate[4]</h5>";
 		}
-		if ($rain > "50") {
+		elseif ($rain > "50") {
 			echo "<img src='assets/images/extreme.png'><br>";
 			echo "<h5>$rainrate[5]</h5>";
 		}
