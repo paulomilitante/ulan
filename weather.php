@@ -50,7 +50,6 @@
 	$periods = array();
 	$periods2 = array();
 	$rains = array();
-	$rains2 = array();
 
 	foreach ($tr->find('small') as $small) {
 		$periods [] = $small->innertext;
@@ -66,12 +65,11 @@
 
 		if ($periods[$i] != 0)
 			$rains[$i] = $periods[$i];
-		elseif ($periods2[$h] == "forecasts/fcimage/fc3hr/rainy1.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/rainy3.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/cloud5.jpg" || $periods2[$h] == "forecasts/fcimage/fc3hr/cloud6.jpg")
+		elseif ($periods2[$h] == "fcimage/fc3hr/rainy1.jpg" || $periods2[$h] == "fcimage/fc3hr/rainy3.jpg" || $periods2[$h] == "fcimage/fc3hr/cloud5.jpg" || $periods2[$h] == "fcimage/fc3hr/cloud6.jpg")
 			$rains[$i] = $periods2[$h];
 	}
-
+	
 	$random = rand(0,1);
-
 	echo !$rains ? "<h1>Hindi.</h1>" : "<h1>Oo.</h1>";
 	echo !$rains ? "<p class='comment'>$hindi[$random]</p>" : "<p class='comment'>$oo[$random]</p>";
 
@@ -80,7 +78,7 @@
 		$x = $key - 1;
 		echo "<div>";
 
-		if ($rain == "forecasts/fcimage/fc3hr/rainy1.jpg" || $rain == "forecasts/fcimage/fc3hr/rainy3.jpg" || $rain == "forecasts/fcimage/fc3hr/cloud5.jpg" || $rain == "forecasts/fcimage/fc3hr/cloud6.jpg" ||) {
+		if ($rain == "fcimage/fc3hr/rainy1.jpg" || $rain == "fcimage/fc3hr/rainy3.jpg" || $rain == "fcimage/fc3hr/cloud5.jpg" || $rain == "fcimage/fc3hr/cloud6.jpg") {
 			echo "<img src='assets/images/very_light.png'><br>";
 			echo "<h5>$rainrate[0]</h5>";
 		}
