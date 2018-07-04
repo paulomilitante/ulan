@@ -69,7 +69,7 @@
 			$rains[$i] = $periods2[$h];
 	}
 	
-	$random = rand(0,6);
+	$random = rand(0,11);
 	echo !$rains ? "<h1>Hindi.</h1>" : "<h1>Oo.</h1>";
 	echo !$rains ? "<p class='comment'>$hindi[$random]</p>" : "<p class='comment'>$oo[$random]</p>";
 
