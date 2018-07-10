@@ -74,37 +74,45 @@
 	echo !$rains ? "<p class='comment'>$hindi[$random]</p>" : "<p class='comment'>$oo[$random]</p>";
 
 	echo "<div class='rain'>";
-	foreach ($rains as $key => $rain) {
-		$x = $key - 1;
+	if ($rains) {
+		foreach ($rains as $key => $rain) {
+			$x = $key - 1;
+			echo "<div>";
+
+			if ($rain == "fcimage/fc3hr/rainy1.jpg" || $rain == "fcimage/fc3hr/rainy3.jpg" || $rain == "fcimage/fc3hr/cloud5.jpg" || $rain == "fcimage/fc3hr/cloud6.jpg") {
+				echo "<img src='assets/images/very_light.png'><br>";
+				echo "<h5>$rainrate[0]</h5>";
+			}
+			elseif ($rain <= "1") {
+				echo "<img src='assets/images/light.png'><br>";
+				echo "<h5>$rainrate[1]</h5>";
+			}
+			elseif ($rain > "1" && $rain <= "4") {
+				echo "<img src='assets/images/moderate.png'><br>";
+				echo "<h5>$rainrate[2]</h5>";
+			}
+			elseif ($rain > "4" && $rain <= "16") {
+				echo "<img src='assets/images/heavy.png'><br>";
+				echo "<h5>$rainrate[3]</h5>";
+			}
+			elseif ($rain > "16" && $rain <= "50") {
+				echo "<img src='assets/images/very_heavy.png'><br>";
+				echo "<h5>$rainrate[4]</h5>";
+			}
+			elseif ($rain > "50") {
+				echo "<img src='assets/images/extreme.png'><br>";
+				echo "<h5>$rainrate[5]</h5>";
+			}
+
+
+			echo "<h4>$time[$x]</h4>";
+			echo "</div>";
+		}
+	}
+	else {
 		echo "<div>";
-
-		if ($rain == "fcimage/fc3hr/rainy1.jpg" || $rain == "fcimage/fc3hr/rainy3.jpg" || $rain == "fcimage/fc3hr/cloud5.jpg" || $rain == "fcimage/fc3hr/cloud6.jpg") {
-			echo "<img src='assets/images/very_light.png'><br>";
-			echo "<h5>$rainrate[0]</h5>";
-		}
-		elseif ($rain <= "1") {
-			echo "<img src='assets/images/light.png'><br>";
-			echo "<h5>$rainrate[1]</h5>";
-		}
-		elseif ($rain > "1" && $rain <= "4") {
-			echo "<img src='assets/images/moderate.png'><br>";
-			echo "<h5>$rainrate[2]</h5>";
-		}
-		elseif ($rain > "4" && $rain <= "16") {
-			echo "<img src='assets/images/heavy.png'><br>";
-			echo "<h5>$rainrate[3]</h5>";
-		}
-		elseif ($rain > "16" && $rain <= "50") {
-			echo "<img src='assets/images/very_heavy.png'><br>";
-			echo "<h5>$rainrate[4]</h5>";
-		}
-		elseif ($rain > "50") {
-			echo "<img src='assets/images/extreme.png'><br>";
-			echo "<h5>$rainrate[5]</h5>";
-		}
-
-
-		echo "<h4>$time[$x]</h4>";
+		echo "<img src='assets/images/sunny.png'>";
+		echo "<h5>No Rain</h5>";
 		echo "</div>";
 	}
 	echo "</div>";

@@ -14,7 +14,7 @@ var weatherSearch = function() {
 			if (answer == "Oo.")
 				$('body').css("background", "url('assets/images/rain.svg')");
 			else
-				$('body').css("background", "none");
+				$('body').css("background", "url('assets/images/firefly.svg')");
 		});
 	
 }
