@@ -10,7 +10,13 @@ var weatherSearch = function() {
 		{'location' : location},
 		function(data) {
 			$('#forecast').html(data);
+			var answer = $('#answer').text();
+			if (answer == "Oo.")
+				$('body').css("background", "url('assets/images/rain.svg')");
+			else
+				$('body').css("background", "none");
 		});
+	
 }
 
 var loader = "<div class='loader'></div>";

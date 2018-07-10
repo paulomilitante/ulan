@@ -70,7 +70,7 @@
 	}
 	
 	$random = rand(0,11);
-	echo !$rains ? "<h1>Hindi.</h1>" : "<h1>Oo.</h1>";
+	echo !$rains ? "<h1 id='answer'>Hindi.</h1>" : "<h1 id='answer'>Oo.</h1>";
 	echo !$rains ? "<p class='comment'>$hindi[$random]</p>" : "<p class='comment'>$oo[$random]</p>";
 
 	echo "<div class='rain'>";
