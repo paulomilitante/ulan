@@ -61,6 +61,7 @@ $locations = ["Quezon City" => "001",
 			"General Santos" => "076",
 			"Butuan" => "077",
 			"Surigao" => "100",
+			"Tagbilaran" => "069"
 			];
 
 ksort($locations);
